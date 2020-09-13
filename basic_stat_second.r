@@ -1,0 +1,32 @@
+Q9_a <- read.csv("C:/Users/Mou/Desktop/finity/COMPLETED ASSIGNMENTS/Q9_a.csv")
+View(Q9_a)
+head(Q9_a)
+str(Q9_a)
+plot(Q9_a$speed,Q9_a$dist)
+plot(speed, dist)
+plot(Q9_a$speed,Q9_a$dist, xlab="speed", ylab="dist", main= "CARS")
+plot(Q9_a$speed,Q9_a$dist, xlab="speed", ylab="dist", main= "CARS", type="b")
+plot(Q9_a$speed,Q9_a$dist, xlab="speed", ylab="dist", main= "CARS", type = "l")
+plot(Q9_a$speed,Q9_a$dist, xlab="speed", ylab="dist", main= "CARS", type = "b", pch= 0)
+plot(Q9_a$speed,Q9_a$dist, xlab="speed", ylab="dist", main= "CARS", type = "b", pch=13)
+plot(Q9_a$speed,Q9_a$dist, xlab="speed", ylab="dist", main= "CARS")
+lines(lowess(Q9_a$speed,Q9_a$dist))
+lines(lowess(Q9_a$speed,Q9_a$dist), lwd=2)
+lines(lowess(Q9_a$speed,Q9_a$dist, f=1/3), lwd=2)
+#scatter plot
+plot(Q9_a$speed, Q9_a$dist, xlab="speed", ylab = "dist", main = "Scatter plot")
+#Density
+plot(density(Q9_a$speed), main = "density of speed")
+#Line plot
+plot(Q9_a$speed, Q9_a$dist, xlab="speed", ylab="dist", type= "l")
+#Boxplot
+boxplot(Q9_a$dist, main="Boxplot for dist")
+boxplot(Q9_a$dist, main="Boxplot for dist")
+boxplot(Q9_a$speed, horizontal = T, main= "Boxplot of speed")
+boxplot(Q9_a$speed~Q9_a$dist)
+#Multiple graph in one plot
+par(mfrow=c(2,2))
+hist(Q9_a$speed, main = "Histogram")
+barplot(Q9_a$speed, main = "Histogram")
+boxplot(Q9_a$speed, main = "Histogram")
+plot(density(Q9_a$speed), main="density plot")
